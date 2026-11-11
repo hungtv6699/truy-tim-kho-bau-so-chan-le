@@ -1,0 +1,1 @@
+const fs=require('node:fs');const questions=JSON.parse(fs.readFileSync('src/questions.json','utf8'));fs.writeFileSync('src/questions.js','const questions='+JSON.stringify(questions)+';\n');

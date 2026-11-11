@@ -1,0 +1,1 @@
+const audioManifest=["intro","choose","correct","wrong","hint","range","ready","win","replay","q0","q1","q2","q3","q4","n1","n2","n3","n4","n5","n6","n7","n8","n9","n10"];

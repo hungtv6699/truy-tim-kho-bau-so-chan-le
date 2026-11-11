@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Truy tìm kho báu bí ẩn</title><link rel="icon" href="data:,"><link rel="stylesheet" href="styles/game.css"><link rel="stylesheet" href="styles/animations.css"></head>
+<body><main id="game" data-phase="home">
+<header><div class="brand"><i class="gem"></i><span>MAGICAL TREASURE HUNT</span></div><nav><button id="sound" aria-pressed="true">Âm thanh: bật</button><button id="full">Toàn màn hình</button></nav></header>
+<section class="stage" aria-label="Hang kho báu">
+<div class="rays"></div><div class="sparkles" aria-hidden="true"></div>
+<div class="chest"><div class="loot"><i></i><i></i><i></i></div><div class="lid"><b></b><b></b></div><div class="body"><div class="locks"></div></div></div>
+<img class="friends" src="assets/friends.webp" alt="Bé gái, Thỏ Trắng và Gấu Nâu">
+</section>
+<section id="scene" aria-label="Thử thách"></section>
+<template id="home"><div class="tag">CUỘC PHIÊU LƯU TOÁN HỌC</div><h1>Truy tìm<br><em>kho báu bí ẩn</em></h1><p>Giải 5 câu đố. Mở 5 ổ khóa!</p><button class="primary" id="start">Bắt đầu khám phá <span aria-hidden="true">›</span></button><button id="intro">Nghe giới thiệu</button></template>
+<template id="play"><div class="tag" id="step"></div><div id="code" aria-label="Các chữ số đã tìm được"></div><h2 id="question"></h2><div id="choices"></div><div id="feedback" role="status"></div><div class="actions"><button id="listen">Nghe lại</button><button id="help">Con cần giúp đỡ</button><button id="back">Trở về</button></div></template>
+<template id="ready"><div class="tag">ĐÃ MỞ 5 / 5 Ổ KHÓA</div><h2>Đủ mật mã rồi!</h2><div id="code" aria-label="Mật mã đã thu thập"></div><button class="primary" id="open">Mở kho báu <span aria-hidden="true">›</span></button></template>
+<template id="win"><div class="tag">KHO BÁU ĐÃ MỞ</div><div class="badge" aria-hidden="true">★</div><h2>Bé giỏi toán!</h2><p>Con đã tìm được kho báu!</p><button class="primary" id="replay">Chơi lại</button><button id="back">Trở về</button></template>
+<dialog id="hint"><div class="tag">BẢNG SỐ 1–10</div><h2>Con cần giúp đỡ</h2><p><span class="even">Số chẵn</span> ghép đủ đôi. <span class="odd">Số lẻ</span> còn thừa một.</p><div id="numberline"></div><div id="pairs" aria-live="polite"></div><div class="actions"><button id="compare">Gợi ý tiếp</button><button class="primary" id="closeHint">Quay lại chọn số</button></div></dialog>
+</main><script src="src/questions.js"></script><script src="audio/manifest.js"></script><script src="src/game-state.js"></script><script src="audio/ambience.js"></script><script src="src/game.js"></script></body></html>
